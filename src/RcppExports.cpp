@@ -5,21 +5,6 @@
 
 using namespace Rcpp;
 
-// longlongFun
-std::vector<double> longlongFun(std::vector<long long> x);
-RcppExport SEXP RcppLongLong_longlongFun(SEXP xSEXP) {
-BEGIN_RCPP
-    SEXP __sexp_result;
-    {
-        Rcpp::RNGScope __rngScope;
-        Rcpp::traits::input_parameter< std::vector<long long> >::type x(xSEXP );
-        std::vector<double> __result = longlongFun(x);
-        PROTECT(__sexp_result = Rcpp::wrap(__result));
-    }
-    UNPROTECT(1);
-    return __sexp_result;
-END_RCPP
-}
 // longFun
 std::vector<double> longFun(std::vector<long> x);
 RcppExport SEXP RcppLongLong_longFun(SEXP xSEXP) {

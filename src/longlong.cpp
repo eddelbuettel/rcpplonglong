@@ -4,13 +4,17 @@
 
 #if defined(RCPP_HAS_LONG_LONG_TYPES)
 
-//' Simple test function for long long vectors
-//'
-//' @title A simple test function for long long vectors
-//' @param x A vector of long long integers
-//' @return A double vector
-//' @author Dirk Eddelbuettel
-// [[Rcpp::export]]
+// turns out we cannot have 'long long' in the signature as Rcpp attributes
+// will then carry it over to the RcppExports.cpp file where we do not have 
+// the #if defined() around it
+
+// ' Simple test function for long long vectors
+// '
+// ' @title A simple test function for long long vectors
+// ' @param x A vector of long long integers
+// ' @return A double vector
+// ' @author Dirk Eddelbuettel
+// [ [ Rcpp::export ] ]
 std::vector<double> longlongFun(std::vector<long long> x) {
     std::vector<double> y(x.size());
     std::copy(x.begin(), x.end(), y.begin());
