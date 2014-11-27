@@ -21,3 +21,13 @@ unsignedlongFun <- function(x) {
     .Call('RcppLongLong_unsignedlongFun', PACKAGE = 'RcppLongLong', x)
 }
 
+#' Internal use of long long vectors
+#'
+#' @title Another simple test function for long long vectors
+#' @param n An integer
+#' @return A double
+#' @author Dirk Eddelbuettel
+longlongInside <- function(n) {
+    .Call('RcppLongLong_longlongInside', PACKAGE = 'RcppLongLong', n)
+}
+

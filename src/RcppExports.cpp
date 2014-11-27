@@ -35,3 +35,18 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
+// longlongInside
+double longlongInside(int n);
+RcppExport SEXP RcppLongLong_longlongInside(SEXP nSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< int >::type n(nSEXP );
+        double __result = longlongInside(n);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}

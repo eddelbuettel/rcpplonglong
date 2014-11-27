@@ -49,3 +49,17 @@ std::vector<double> unsignedlongFun(std::vector<unsigned long> x) {
     std::copy(x.begin(), x.end(), y.begin());
     return y;
 }
+
+//' Internal use of long long vectors
+//'
+//' @title Another simple test function for long long vectors
+//' @param n An integer
+//' @return A double
+//' @author Dirk Eddelbuettel
+// [[Rcpp::export]]
+double longlongInside(int n) {
+    std::vector<long long> x(n);
+    for (int i=0; i<n; i++) x[i] = i;
+    double s = std::accumulate(x.begin(), x.end(), 0);
+    return s;
+}
