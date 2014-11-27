@@ -4,10 +4,20 @@
 #' Simple test function for long vectors
 #'
 #' @title A simple test function for long vectors
-#' @param x A vector of long long integers
+#' @param x A vector of long integers
 #' @return A double vector
 #' @author Dirk Eddelbuettel
 longFun <- function(x) {
     .Call('RcppLongLong_longFun', PACKAGE = 'RcppLongLong', x)
+}
+
+#' Simple test function for unsigned long vectors
+#'
+#' @title A simple test function for unsigned long vectors
+#' @param x A vector of unsigned long integers
+#' @return A double vector
+#' @author Dirk Eddelbuettel
+unsignedlongFun <- function(x) {
+    .Call('RcppLongLong_unsignedlongFun', PACKAGE = 'RcppLongLong', x)
 }
 

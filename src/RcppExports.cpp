@@ -20,3 +20,18 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
+// unsignedlongFun
+std::vector<double> unsignedlongFun(std::vector<unsigned long> x);
+RcppExport SEXP RcppLongLong_unsignedlongFun(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< std::vector<unsigned long> >::type x(xSEXP );
+        std::vector<double> __result = unsignedlongFun(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}

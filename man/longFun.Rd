@@ -6,7 +6,7 @@
 longFun(x)
 }
 \arguments{
-\item{x}{A vector of long long integers}
+\item{x}{A vector of long integers}
 }
 \value{
 A double vector
