@@ -1,4 +1,2 @@
-
-## We want C++11 as it gets us 'long long' as well
-## If we uncomment this we fall back to C++98 and it is all tears
-CXX_STD = CXX11
+## Use C++11 where available. This ensures 'long long' (a C99 standard)
+PKG_CXXFLAGS=$(CXX1XSTD)
