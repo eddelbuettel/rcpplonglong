@@ -1,9 +1,0 @@
-
-## We want C++11 as it gets us 'long long' as well
-## If we uncomment this we fall back to C++98 and it is all tears
-CXX_STD = CXX11
-
-## Alternatively, just use C++11 options (where available) for standard C++
-## compiler.  This brings 'long long' (from both C99 and C++2003) in with
-## most compilers as either the C++0x or C++11 standard will get pulled in.
-#PKG_CXXFLAGS=$(CXX1XSTD)
